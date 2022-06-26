@@ -4,7 +4,7 @@ services:
   sonarr:
     image: ghcr.io/linuxserver/sonarr:latest
     container_name: sonarr
-    restart: IfNotStopped
+    restart: unless-stopped
     volumes:
       - /mnt/sonarr:/config
       - /mnt/media:/media
