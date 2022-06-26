@@ -41,15 +41,11 @@ services:
     ports:
       - 8080:8080
   jellyfin:
-    image: lscr.io/linuxserver/jellyfin:latest
+    image: jellyfin/jellyfin:latest
     container_name: jellyfin
     restart: unless-stopped
     volumes:
       - /mnt/jellyfin:/config
       - /mnt/media:/media
-    environment:
-      TZ: "Europe/Berlin"
-      PUID: 1000
-      PGID: 1000
     ports:
       - 8096:8096
